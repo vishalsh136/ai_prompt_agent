@@ -2,7 +2,7 @@ name: Auto Algo Trader Loop
 
 on:
   schedule:
-    - cron: '30 9 * * 1-5'  # 9:30 AM IST on weekdays
+    - cron: '*/15 9-15 * * 1-5'  # Every 15 min, 9:30 AM - 3:30 PM IST (Mon-Fri)
   workflow_dispatch:
 
 jobs:
