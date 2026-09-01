@@ -1,0 +1,27 @@
+{
+  "ts": "2026-08-31T11:20:01",
+  "date": "2026-08-31",
+  "mtm_events_today": 113,
+  "recommended": "Agent-OptionSeller",
+  "recommended_message": "Recommended: \ud83e\udd16\u2699\ufe0f Agent-OptionSeller (Smart-Win).",
+  "strategy_state": {
+    "Institutional": "SKIP:EXPENSIVE_PREMIUM(entry=102 > 60%ATR=92, VIX=0.0)",
+    "OptionSeller": "ACTIVE",
+    "OptionBuyer": "ACTIVE",
+    "Hedging": "SKIP:THIN_CREDIT(credit=7.10<15.00=10%x150pts,dte=3)",
+    "Agent-Institutional": "SKIP:EXPENSIVE_PREMIUM(entry=102 > 60%ATR=92, VIX=0.0)",
+    "Agent-OptionSeller": "ACTIVE"
+  },
+  "positions": {
+    "algo_NIFTY_Agent-OptionSeller_20260831": {
+      "events": 30,
+      "pnl_latest": -61.75,
+      "pnl_min": -156.0,
+      "pnl_max": -35.75,
+      "pnl_avg": -77.35,
+      "current_value_latest": 32.55,
+      "day_move_latest": -0.457,
+      "drift_window": -26.0
+    }
+  }
+}

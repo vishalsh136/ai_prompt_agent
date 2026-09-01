@@ -1,0 +1,2226 @@
+{
+  "symbol": "NIFTY",
+  "timestamp": "2026-08-12T16:08:03",
+  "cron_run_time": "2026-08-12T18:29:47.547791+00:00",
+  "cron_run_label": "23:59",
+  "source": "niftytrader.in (live, no-auth)",
+  "source_url": "https://www.niftytrader.in/nse-option-chain/nifty",
+  "spot_price": 24435.95,
+  "open": 24472.45,
+  "high": 24473.3,
+  "low": 24265.95,
+  "vix": 11.69,
+  "vix_change": -0.17,
+  "max_pain": 24400.0,
+  "lot_size": 65,
+  "expected_range": "24238.89 ~ 24633.01",
+  "pcr": 0.7538,
+  "pcr_change": 0.5623,
+  "strikes": [
+    {
+      "strike": 22000.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 836.484,
+      "CE": {
+        "oi": 4030,
+        "chg_oi": 1430,
+        "ltp": 2365.0,
+        "iv": 0.0,
+        "volume": 1690,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 3371030,
+        "chg_oi": 109200,
+        "ltp": 0.8,
+        "iv": 0.0,
+        "volume": 4462575,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22050.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2148.45,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 187005,
+        "chg_oi": 13650,
+        "ltp": 0.85,
+        "iv": 0.0,
+        "volume": 803205,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22100.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2100.9,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 462800,
+        "chg_oi": 205790,
+        "ltp": 0.9,
+        "iv": 0.0,
+        "volume": 1379430,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22150.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2053.6,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 40170,
+        "chg_oi": 28600,
+        "ltp": 0.85,
+        "iv": 0.0,
+        "volume": 162305,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22200.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2006.5,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 517140,
+        "chg_oi": 165230,
+        "ltp": 0.9,
+        "iv": 0.0,
+        "volume": 1370590,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22250.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1959.6,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 31655,
+        "chg_oi": 22100,
+        "ltp": 0.95,
+        "iv": 0.0,
+        "volume": 111670,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22300.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1912.95,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 146120,
+        "chg_oi": -3705,
+        "ltp": 1.0,
+        "iv": 0.0,
+        "volume": 698945,
+        "buildup": "Put Long Covering"
+      }
+    },
+    {
+      "strike": 22350.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1866.6,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 25415,
+        "chg_oi": 5200,
+        "ltp": 1.05,
+        "iv": 0.0,
+        "volume": 154700,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22400.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1820.55,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 180700,
+        "chg_oi": 75595,
+        "ltp": 1.1,
+        "iv": 0.0,
+        "volume": 1112605,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22450.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1774.75,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 37830,
+        "chg_oi": 25090,
+        "ltp": 1.1,
+        "iv": 0.0,
+        "volume": 189020,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22500.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 519.39,
+      "CE": {
+        "oi": 6500,
+        "chg_oi": -65,
+        "ltp": 1924.0,
+        "iv": 0.0,
+        "volume": 65,
+        "buildup": "Call Long Covering"
+      },
+      "PE": {
+        "oi": 3376035,
+        "chg_oi": 1002885,
+        "ltp": 1.4,
+        "iv": 0.0,
+        "volume": 7385625,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22550.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1684.2,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 33150,
+        "chg_oi": 21255,
+        "ltp": 1.5,
+        "iv": 0.0,
+        "volume": 265655,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22600.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1639.4,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 335010,
+        "chg_oi": -35035,
+        "ltp": 1.3,
+        "iv": 0.0,
+        "volume": 2243345,
+        "buildup": "Put Long Covering"
+      }
+    },
+    {
+      "strike": 22650.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1595.05,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 40430,
+        "chg_oi": 29770,
+        "ltp": 1.65,
+        "iv": 0.0,
+        "volume": 270270,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22700.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1551.05,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 367640,
+        "chg_oi": 47905,
+        "ltp": 1.55,
+        "iv": 0.0,
+        "volume": 2038400,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22750.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1507.45,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 51025,
+        "chg_oi": 14560,
+        "ltp": 1.35,
+        "iv": 0.0,
+        "volume": 361270,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22800.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1464.3,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 945295,
+        "chg_oi": 377715,
+        "ltp": 1.65,
+        "iv": 0.0,
+        "volume": 4070495,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22850.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1421.6,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 89570,
+        "chg_oi": 39195,
+        "ltp": 1.55,
+        "iv": 0.0,
+        "volume": 1001065,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22900.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1379.35,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 317590,
+        "chg_oi": 59865,
+        "ltp": 1.65,
+        "iv": 0.0,
+        "volume": 2697370,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 22950.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1337.6,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 114465,
+        "chg_oi": 45565,
+        "ltp": 1.65,
+        "iv": 0.0,
+        "volume": 1490450,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23000.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 108.723,
+      "CE": {
+        "oi": 42705,
+        "chg_oi": 5005,
+        "ltp": 1440.9,
+        "iv": 0.0,
+        "volume": 8970,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 4643015,
+        "chg_oi": 299780,
+        "ltp": 1.85,
+        "iv": 0.0,
+        "volume": 12683580,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23050.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1255.65,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 163735,
+        "chg_oi": 93860,
+        "ltp": 1.6,
+        "iv": 0.0,
+        "volume": 2255565,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23100.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 4126.25,
+      "CE": {
+        "oi": 260,
+        "chg_oi": 0,
+        "ltp": 1400.0,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 1072825,
+        "chg_oi": 120185,
+        "ltp": 1.9,
+        "iv": 0.0,
+        "volume": 4611165,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23150.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 275.0,
+      "CE": {
+        "oi": 390,
+        "chg_oi": 0,
+        "ltp": 1432.75,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 107250,
+        "chg_oi": 36790,
+        "ltp": 1.8,
+        "iv": 0.0,
+        "volume": 2802410,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23200.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 1137.031,
+      "CE": {
+        "oi": 2080,
+        "chg_oi": 260,
+        "ltp": 1202.8,
+        "iv": 0.0,
+        "volume": 1625,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 2365025,
+        "chg_oi": 730665,
+        "ltp": 2.2,
+        "iv": 0.0,
+        "volume": 10925330,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23250.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 3809.0,
+      "CE": {
+        "oi": 65,
+        "chg_oi": -195,
+        "ltp": 1144.0,
+        "iv": 0.0,
+        "volume": 845,
+        "buildup": "Call Long Covering"
+      },
+      "PE": {
+        "oi": 247585,
+        "chg_oi": 109005,
+        "ltp": 2.05,
+        "iv": 0.0,
+        "volume": 5427565,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23300.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 879.308,
+      "CE": {
+        "oi": 2535,
+        "chg_oi": -65,
+        "ltp": 1054.05,
+        "iv": 0.0,
+        "volume": 65,
+        "buildup": "Call Long Covering"
+      },
+      "PE": {
+        "oi": 2229045,
+        "chg_oi": 399100,
+        "ltp": 2.25,
+        "iv": 0.0,
+        "volume": 14572155,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23350.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 1767.5,
+      "CE": {
+        "oi": 260,
+        "chg_oi": -65,
+        "ltp": 1081.25,
+        "iv": 0.0,
+        "volume": 390,
+        "buildup": "Call Long Covering"
+      },
+      "PE": {
+        "oi": 459550,
+        "chg_oi": 253370,
+        "ltp": 2.05,
+        "iv": 0.0,
+        "volume": 7609095,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23400.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 251.101,
+      "CE": {
+        "oi": 7085,
+        "chg_oi": 1625,
+        "ltp": 1045.7,
+        "iv": 0.0,
+        "volume": 19240,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 1779050,
+        "chg_oi": 308165,
+        "ltp": 2.4,
+        "iv": 0.0,
+        "volume": 14451255,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23450.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 951.0,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 496860,
+        "chg_oi": 283400,
+        "ltp": 2.6,
+        "iv": 0.0,
+        "volume": 6699745,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23500.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 49.56,
+      "CE": {
+        "oi": 108485,
+        "chg_oi": 9230,
+        "ltp": 951.0,
+        "iv": 0.0,
+        "volume": 88725,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 5376475,
+        "chg_oi": 1031550,
+        "ltp": 2.95,
+        "iv": 0.0,
+        "volume": 27401855,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23550.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 420.68,
+      "CE": {
+        "oi": 1625,
+        "chg_oi": 910,
+        "ltp": 916.9,
+        "iv": 0.0,
+        "volume": 3575,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 683605,
+        "chg_oi": 366990,
+        "ltp": 3.3,
+        "iv": 0.0,
+        "volume": 8077745,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23600.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 129.537,
+      "CE": {
+        "oi": 19240,
+        "chg_oi": -650,
+        "ltp": 846.2,
+        "iv": 0.0,
+        "volume": 13130,
+        "buildup": "Call Long Covering"
+      },
+      "PE": {
+        "oi": 2492295,
+        "chg_oi": 687245,
+        "ltp": 3.4,
+        "iv": 0.0,
+        "volume": 28766010,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23650.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 498.364,
+      "CE": {
+        "oi": 2145,
+        "chg_oi": 1105,
+        "ltp": 804.9,
+        "iv": 0.0,
+        "volume": 3445,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 1068990,
+        "chg_oi": 404690,
+        "ltp": 3.65,
+        "iv": 0.0,
+        "volume": 16702985,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23700.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 103.116,
+      "CE": {
+        "oi": 29250,
+        "chg_oi": 8255,
+        "ltp": 751.5,
+        "iv": 0.0,
+        "volume": 50830,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 3016130,
+        "chg_oi": 1189305,
+        "ltp": 4.55,
+        "iv": 0.0,
+        "volume": 25917385,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23750.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 318.278,
+      "CE": {
+        "oi": 3510,
+        "chg_oi": 1820,
+        "ltp": 700.3,
+        "iv": 0.0,
+        "volume": 9425,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 1117155,
+        "chg_oi": 646620,
+        "ltp": 5.0,
+        "iv": 0.0,
+        "volume": 17016025,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23800.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 76.795,
+      "CE": {
+        "oi": 64350,
+        "chg_oi": 16120,
+        "ltp": 650.35,
+        "iv": 0.0,
+        "volume": 165620,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 4941755,
+        "chg_oi": 711945,
+        "ltp": 6.05,
+        "iv": 0.0,
+        "volume": 43303455,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23850.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 76.418,
+      "CE": {
+        "oi": 21905,
+        "chg_oi": 4550,
+        "ltp": 602.1,
+        "iv": 0.0,
+        "volume": 41600,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 1673945,
+        "chg_oi": 940875,
+        "ltp": 7.1,
+        "iv": 0.0,
+        "volume": 19606990,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23900.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 19.998,
+      "CE": {
+        "oi": 231465,
+        "chg_oi": 60515,
+        "ltp": 553.05,
+        "iv": 0.0,
+        "volume": 360490,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 4628780,
+        "chg_oi": 1121705,
+        "ltp": 8.7,
+        "iv": 0.0,
+        "volume": 41831920,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 23950.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 43.782,
+      "CE": {
+        "oi": 32825,
+        "chg_oi": 20280,
+        "ltp": 508.6,
+        "iv": 0.0,
+        "volume": 163670,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 1437150,
+        "chg_oi": 698490,
+        "ltp": 11.35,
+        "iv": 0.0,
+        "volume": 25369565,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 24000.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 16.471,
+      "CE": {
+        "oi": 469105,
+        "chg_oi": 115635,
+        "ltp": 461.55,
+        "iv": 0.0,
+        "volume": 3606200,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 7726485,
+        "chg_oi": 1874665,
+        "ltp": 14.55,
+        "iv": 0.0,
+        "volume": 79942460,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 24050.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 15.194,
+      "CE": {
+        "oi": 78260,
+        "chg_oi": 52130,
+        "ltp": 413.1,
+        "iv": 0.0,
+        "volume": 633425,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 1189110,
+        "chg_oi": 522015,
+        "ltp": 18.0,
+        "iv": 0.0,
+        "volume": 31059795,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 24100.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 10.142,
+      "CE": {
+        "oi": 321555,
+        "chg_oi": 134680,
+        "ltp": 369.2,
+        "iv": 0.0,
+        "volume": 3740035,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 3261245,
+        "chg_oi": 1262300,
+        "ltp": 23.65,
+        "iv": 0.0,
+        "volume": 49782395,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 24150.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 8.829,
+      "CE": {
+        "oi": 168025,
+        "chg_oi": 141375,
+        "ltp": 326.45,
+        "iv": 0.0,
+        "volume": 2886715,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 1483430,
+        "chg_oi": 927875,
+        "ltp": 31.0,
+        "iv": 0.0,
+        "volume": 36036065,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 24200.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 5.648,
+      "CE": {
+        "oi": 836615,
+        "chg_oi": 400335,
+        "ltp": 285.95,
+        "iv": 0.0,
+        "volume": 20859605,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 4725500,
+        "chg_oi": 1189760,
+        "ltp": 39.25,
+        "iv": 0.0,
+        "volume": 86932885,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 24250.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 7.124,
+      "CE": {
+        "oi": 352300,
+        "chg_oi": 271895,
+        "ltp": 247.0,
+        "iv": 0.0,
+        "volume": 23892245,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 2509910,
+        "chg_oi": 1120665,
+        "ltp": 50.1,
+        "iv": 0.0,
+        "volume": 79365585,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 24300.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 2.398,
+      "CE": {
+        "oi": 2416115,
+        "chg_oi": 1882335,
+        "ltp": 211.0,
+        "iv": 0.0,
+        "volume": 83452590,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 5794685,
+        "chg_oi": 3057860,
+        "ltp": 64.75,
+        "iv": 0.0,
+        "volume": 152842690,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 24350.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 1.581,
+      "CE": {
+        "oi": 1495910,
+        "chg_oi": 1312935,
+        "ltp": 177.95,
+        "iv": 0.0,
+        "volume": 61930440,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 2365350,
+        "chg_oi": 1345890,
+        "ltp": 81.0,
+        "iv": 0.0,
+        "volume": 104025675,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 24400.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.816,
+      "CE": {
+        "oi": 6155370,
+        "chg_oi": 4321070,
+        "ltp": 147.6,
+        "iv": 0.0,
+        "volume": 133295240,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 5025800,
+        "chg_oi": 1901315,
+        "ltp": 100.85,
+        "iv": 0.0,
+        "volume": 156887900,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 24450.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.459,
+      "CE": {
+        "oi": 3178175,
+        "chg_oi": 1569880,
+        "ltp": 121.1,
+        "iv": 0.0,
+        "volume": 77640420,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 1459315,
+        "chg_oi": -114010,
+        "ltp": 124.4,
+        "iv": 0.0,
+        "volume": 73419515,
+        "buildup": "Put Short Covering"
+      }
+    },
+    {
+      "strike": 24500.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.348,
+      "CE": {
+        "oi": 9031035,
+        "chg_oi": 3893760,
+        "ltp": 98.35,
+        "iv": 0.0,
+        "volume": 129229945,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 3140475,
+        "chg_oi": -1128985,
+        "ltp": 150.25,
+        "iv": 0.0,
+        "volume": 78883610,
+        "buildup": "Put Short Covering"
+      }
+    },
+    {
+      "strike": 24550.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.162,
+      "CE": {
+        "oi": 2922270,
+        "chg_oi": 1415115,
+        "ltp": 77.9,
+        "iv": 0.0,
+        "volume": 51617085,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 472160,
+        "chg_oi": -87035,
+        "ltp": 180.65,
+        "iv": 0.0,
+        "volume": 16305445,
+        "buildup": "Put Short Covering"
+      }
+    },
+    {
+      "strike": 24600.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.234,
+      "CE": {
+        "oi": 7173530,
+        "chg_oi": 2666755,
+        "ltp": 60.3,
+        "iv": 0.0,
+        "volume": 77747605,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 1681030,
+        "chg_oi": -190970,
+        "ltp": 213.05,
+        "iv": 0.0,
+        "volume": 21503040,
+        "buildup": "Put Short Covering"
+      }
+    },
+    {
+      "strike": 24650.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.133,
+      "CE": {
+        "oi": 2530515,
+        "chg_oi": 896675,
+        "ltp": 46.15,
+        "iv": 0.0,
+        "volume": 38625145,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 335335,
+        "chg_oi": -52390,
+        "ltp": 248.2,
+        "iv": 0.0,
+        "volume": 3786575,
+        "buildup": "Put Short Covering"
+      }
+    },
+    {
+      "strike": 24700.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.143,
+      "CE": {
+        "oi": 5944250,
+        "chg_oi": 1113450,
+        "ltp": 35.1,
+        "iv": 0.0,
+        "volume": 59793955,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 850200,
+        "chg_oi": -137605,
+        "ltp": 287.65,
+        "iv": 0.0,
+        "volume": 5248815,
+        "buildup": "Put Short Covering"
+      }
+    },
+    {
+      "strike": 24750.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.059,
+      "CE": {
+        "oi": 2129725,
+        "chg_oi": -76180,
+        "ltp": 25.95,
+        "iv": 0.0,
+        "volume": 31565755,
+        "buildup": "Call Long Covering"
+      },
+      "PE": {
+        "oi": 125580,
+        "chg_oi": -22490,
+        "ltp": 330.15,
+        "iv": 0.0,
+        "volume": 839865,
+        "buildup": "Put Short Covering"
+      }
+    },
+    {
+      "strike": 24800.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.079,
+      "CE": {
+        "oi": 5717790,
+        "chg_oi": 1449045,
+        "ltp": 19.4,
+        "iv": 0.0,
+        "volume": 54581930,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 452400,
+        "chg_oi": 15080,
+        "ltp": 371.35,
+        "iv": 0.0,
+        "volume": 1732445,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 24850.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.012,
+      "CE": {
+        "oi": 3224910,
+        "chg_oi": 2226250,
+        "ltp": 13.9,
+        "iv": 0.0,
+        "volume": 27985425,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 38480,
+        "chg_oi": 1625,
+        "ltp": 418.0,
+        "iv": 0.0,
+        "volume": 231725,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 24900.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.075,
+      "CE": {
+        "oi": 4700930,
+        "chg_oi": 1790165,
+        "ltp": 10.45,
+        "iv": 0.0,
+        "volume": 37195730,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 354510,
+        "chg_oi": -41015,
+        "ltp": 462.4,
+        "iv": 0.0,
+        "volume": 560430,
+        "buildup": "Put Short Covering"
+      }
+    },
+    {
+      "strike": 24950.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.017,
+      "CE": {
+        "oi": 2133495,
+        "chg_oi": 867100,
+        "ltp": 7.9,
+        "iv": 0.0,
+        "volume": 20963930,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 35555,
+        "chg_oi": 18135,
+        "ltp": 511.9,
+        "iv": 0.0,
+        "volume": 75270,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25000.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.047,
+      "CE": {
+        "oi": 9160125,
+        "chg_oi": 2652455,
+        "ltp": 6.45,
+        "iv": 0.0,
+        "volume": 53575860,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 430365,
+        "chg_oi": -56810,
+        "ltp": 559.75,
+        "iv": 0.0,
+        "volume": 671645,
+        "buildup": "Put Short Covering"
+      }
+    },
+    {
+      "strike": 25050.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.026,
+      "CE": {
+        "oi": 1419730,
+        "chg_oi": 346320,
+        "ltp": 4.85,
+        "iv": 0.0,
+        "volume": 23631010,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 36660,
+        "chg_oi": 19565,
+        "ltp": 605.75,
+        "iv": 0.0,
+        "volume": 38545,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25100.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.026,
+      "CE": {
+        "oi": 3149510,
+        "chg_oi": 925535,
+        "ltp": 3.85,
+        "iv": 0.0,
+        "volume": 37267295,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 82680,
+        "chg_oi": 7410,
+        "ltp": 654.7,
+        "iv": 0.0,
+        "volume": 47905,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25150.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.013,
+      "CE": {
+        "oi": 1421030,
+        "chg_oi": 337740,
+        "ltp": 3.3,
+        "iv": 0.0,
+        "volume": 33334405,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 18915,
+        "chg_oi": 16510,
+        "ltp": 705.7,
+        "iv": 0.0,
+        "volume": 24050,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25200.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.024,
+      "CE": {
+        "oi": 4343625,
+        "chg_oi": 544180,
+        "ltp": 2.4,
+        "iv": 0.0,
+        "volume": 48683765,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 102375,
+        "chg_oi": 4160,
+        "ltp": 754.1,
+        "iv": 0.0,
+        "volume": 41925,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25250.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.013,
+      "CE": {
+        "oi": 1161745,
+        "chg_oi": -926120,
+        "ltp": 2.2,
+        "iv": 0.0,
+        "volume": 27807585,
+        "buildup": "Call Long Covering"
+      },
+      "PE": {
+        "oi": 15145,
+        "chg_oi": 15080,
+        "ltp": 802.6,
+        "iv": 0.0,
+        "volume": 17420,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25300.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.013,
+      "CE": {
+        "oi": 2981810,
+        "chg_oi": 385710,
+        "ltp": 1.85,
+        "iv": 0.0,
+        "volume": 41695355,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 37310,
+        "chg_oi": 7800,
+        "ltp": 864.05,
+        "iv": 0.0,
+        "volume": 17680,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25350.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.004,
+      "CE": {
+        "oi": 1363700,
+        "chg_oi": 21580,
+        "ltp": 1.65,
+        "iv": 0.0,
+        "volume": 23290020,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 5915,
+        "chg_oi": 4485,
+        "ltp": 930.8,
+        "iv": 0.0,
+        "volume": 5590,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25400.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.006,
+      "CE": {
+        "oi": 2637635,
+        "chg_oi": 24245,
+        "ltp": 1.55,
+        "iv": 0.0,
+        "volume": 32649110,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 15470,
+        "chg_oi": 455,
+        "ltp": 957.8,
+        "iv": 0.0,
+        "volume": 3835,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25450.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 1505660,
+        "chg_oi": 901030,
+        "ltp": 1.4,
+        "iv": 0.0,
+        "volume": 7592455,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 325,
+        "chg_oi": 260,
+        "ltp": 990.7,
+        "iv": 0.0,
+        "volume": 520,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25500.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.023,
+      "CE": {
+        "oi": 7355725,
+        "chg_oi": 2141945,
+        "ltp": 1.35,
+        "iv": 0.0,
+        "volume": 26745680,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 171340,
+        "chg_oi": 1755,
+        "ltp": 1050.7,
+        "iv": 0.0,
+        "volume": 17615,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25550.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 767260,
+        "chg_oi": 117000,
+        "ltp": 1.15,
+        "iv": 0.0,
+        "volume": 4253340,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1452.05,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 25600.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.001,
+      "CE": {
+        "oi": 3915860,
+        "chg_oi": 1472055,
+        "ltp": 1.0,
+        "iv": 0.0,
+        "volume": 18938920,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 2340,
+        "chg_oi": 130,
+        "ltp": 1185.85,
+        "iv": 0.0,
+        "volume": 520,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25650.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.001,
+      "CE": {
+        "oi": 955890,
+        "chg_oi": 386230,
+        "ltp": 0.9,
+        "iv": 0.0,
+        "volume": 3251560,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 520,
+        "chg_oi": 520,
+        "ltp": 1178.3,
+        "iv": 0.0,
+        "volume": 520,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 25700.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 3521700,
+        "chg_oi": 1373450,
+        "ltp": 0.85,
+        "iv": 0.0,
+        "volume": 12483055,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 1040,
+        "chg_oi": 0,
+        "ltp": 1194.2,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 25750.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 926705,
+        "chg_oi": 588185,
+        "ltp": 0.85,
+        "iv": 0.0,
+        "volume": 2958085,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1625.45,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 25800.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 3446495,
+        "chg_oi": 858325,
+        "ltp": 0.8,
+        "iv": 0.0,
+        "volume": 8861775,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 845,
+        "chg_oi": 65,
+        "ltp": 1450.0,
+        "iv": 0.0,
+        "volume": 65,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 25850.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 784420,
+        "chg_oi": 581490,
+        "ltp": 0.8,
+        "iv": 0.0,
+        "volume": 2732795,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 260,
+        "chg_oi": 0,
+        "ltp": 1334.0,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 25900.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 3034590,
+        "chg_oi": 1271400,
+        "ltp": 0.8,
+        "iv": 0.0,
+        "volume": 9906910,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 585,
+        "chg_oi": 0,
+        "ltp": 1260.65,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 25950.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 428155,
+        "chg_oi": 215280,
+        "ltp": 0.8,
+        "iv": 0.0,
+        "volume": 1670045,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1804.45,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26000.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.022,
+      "CE": {
+        "oi": 6461260,
+        "chg_oi": 1821170,
+        "ltp": 0.85,
+        "iv": 0.0,
+        "volume": 18825105,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 139360,
+        "chg_oi": 1755,
+        "ltp": 1550.4,
+        "iv": 0.0,
+        "volume": 3770,
+        "buildup": "Put Buying"
+      }
+    },
+    {
+      "strike": 26050.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 262470,
+        "chg_oi": 35685,
+        "ltp": 0.75,
+        "iv": 0.0,
+        "volume": 1213680,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1895.7,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26100.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 1020695,
+        "chg_oi": -80600,
+        "ltp": 0.75,
+        "iv": 0.0,
+        "volume": 3828240,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 130,
+        "chg_oi": 0,
+        "ltp": 1570.0,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26150.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 152620,
+        "chg_oi": 19370,
+        "ltp": 0.8,
+        "iv": 0.0,
+        "volume": 1157000,
+        "buildup": "Call Buying"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 1988.05,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26200.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 259220,
+        "chg_oi": -156845,
+        "ltp": 0.75,
+        "iv": 0.0,
+        "volume": 2448810,
+        "buildup": "Call Short Covering"
+      },
+      "PE": {
+        "oi": 65,
+        "chg_oi": 0,
+        "ltp": 1677.0,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26250.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 51870,
+        "chg_oi": -63180,
+        "ltp": 0.65,
+        "iv": 0.0,
+        "volume": 1007695,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2081.3,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26300.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 91195,
+        "chg_oi": 41535,
+        "ltp": 0.6,
+        "iv": 0.0,
+        "volume": 711165,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2128.25,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26350.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 25350,
+        "chg_oi": 11765,
+        "ltp": 0.6,
+        "iv": 0.0,
+        "volume": 255190,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2175.4,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26400.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 66755,
+        "chg_oi": -585,
+        "ltp": 0.75,
+        "iv": 0.0,
+        "volume": 591175,
+        "buildup": "No Conclusion"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2222.7,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26450.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 27755,
+        "chg_oi": -10920,
+        "ltp": 0.55,
+        "iv": 0.0,
+        "volume": 142285,
+        "buildup": "Call Long Covering"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2270.2,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26500.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.004,
+      "CE": {
+        "oi": 269815,
+        "chg_oi": 142025,
+        "ltp": 0.55,
+        "iv": 0.0,
+        "volume": 1420705,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 975,
+        "chg_oi": 0,
+        "ltp": 1975.0,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26550.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 12155,
+        "chg_oi": 6370,
+        "ltp": 0.55,
+        "iv": 0.0,
+        "volume": 142090,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2365.65,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26600.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 49075,
+        "chg_oi": 37895,
+        "ltp": 0.55,
+        "iv": 0.0,
+        "volume": 204620,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2413.6,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26650.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 19760,
+        "chg_oi": 10140,
+        "ltp": 0.55,
+        "iv": 0.0,
+        "volume": 80015,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2461.7,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26700.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 29445,
+        "chg_oi": 3575,
+        "ltp": 0.5,
+        "iv": 0.0,
+        "volume": 103480,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2509.9,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26750.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 9425,
+        "chg_oi": 7800,
+        "ltp": 0.55,
+        "iv": 0.0,
+        "volume": 39780,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2558.25,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26800.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 61880,
+        "chg_oi": 2340,
+        "ltp": 0.5,
+        "iv": 0.0,
+        "volume": 148135,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2606.7,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26850.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 40820,
+        "chg_oi": 23465,
+        "ltp": 0.5,
+        "iv": 0.0,
+        "volume": 152360,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2655.25,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26900.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 142220,
+        "chg_oi": 127010,
+        "ltp": 0.5,
+        "iv": 0.0,
+        "volume": 409565,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2703.85,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 26950.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 46735,
+        "chg_oi": 46345,
+        "ltp": 0.45,
+        "iv": 0.0,
+        "volume": 255580,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2752.6,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 27000.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": 0.001,
+      "CE": {
+        "oi": 390975,
+        "chg_oi": -54210,
+        "ltp": 0.45,
+        "iv": 0.0,
+        "volume": 2939430,
+        "buildup": "Call Long Covering"
+      },
+      "PE": {
+        "oi": 520,
+        "chg_oi": 520,
+        "ltp": 2646.0,
+        "iv": 0.0,
+        "volume": 520,
+        "buildup": "Put Writing"
+      }
+    },
+    {
+      "strike": 27050.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 22230,
+        "chg_oi": 21580,
+        "ltp": 0.45,
+        "iv": 0.0,
+        "volume": 85475,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2850.25,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 27100.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 51805,
+        "chg_oi": 47710,
+        "ltp": 0.4,
+        "iv": 0.0,
+        "volume": 541515,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2899.2,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 27150.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 58565,
+        "chg_oi": 53105,
+        "ltp": 0.45,
+        "iv": 0.0,
+        "volume": 228605,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2948.25,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    },
+    {
+      "strike": 27200.0,
+      "expiry": "2026-08-18T00:00:00",
+      "pcr": null,
+      "CE": {
+        "oi": 246740,
+        "chg_oi": 103220,
+        "ltp": 0.45,
+        "iv": 0.0,
+        "volume": 1412125,
+        "buildup": "Call Writing"
+      },
+      "PE": {
+        "oi": 0,
+        "chg_oi": 0,
+        "ltp": 2997.3,
+        "iv": 0.0,
+        "volume": 0,
+        "buildup": "No Conclusion"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+[Unit]
+Description=AI Prompt Agent - Streamlit UI
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/ai_prompt_agent
+Environment=PYTHONUNBUFFERED=1
+# Streamlit served on 8501, headless (no browser), listening on all interfaces.
+ExecStart=/home/ubuntu/ai_prompt_agent/.venv/bin/streamlit run app.py \
+    --server.port=8501 \
+    --server.address=0.0.0.0 \
+    --server.headless=true \
+    --browser.gatherUsageStats=false
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

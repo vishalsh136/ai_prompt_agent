@@ -1,0 +1,11 @@
+{
+  "analysis_date": "2026-07-28T20:10:55.892533",
+  "spot_price": 24000,
+  "volatility_pct": NaN,
+  "pcr": 0.9232,
+  "vix": 12.56,
+  "trend": "Uptrend",
+  "best_strategy": "Option Selling (Iron Condor / Short Strangle)",
+  "profitability_score": 7,
+  "win_rate_expected": "65-75%"
+}

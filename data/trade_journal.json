@@ -1,0 +1,28 @@
+[
+  {
+    "id": "20260723_134226",
+    "timestamp": "2026-07-23 13:42:26",
+    "symbol": "NIFTY",
+    "instrument": "CE+PE",
+    "direction": "sell",
+    "strike": 0,
+    "entry_price": 0.0,
+    "stop_loss": 0.0,
+    "target": 0.0,
+    "qty_lots": 50,
+    "lot_size": 25,
+    "strategy_type": "Hedge \u2014 \u2b50 Bull Put Credit Spread (Best Small-Return Strategy)",
+    "regime": "Strongly Bearish",
+    "structure": "Higher Highs / Higher Lows",
+    "reason": "Market is neutral to bullish. PCR elevated (bearish sentiment = contrarian buy). Spot well above 23650 support zone.",
+    "expected_time": "5-15 trading days (hold to expiry or close at 70-80% profit)",
+    "margin_approx": "\u20b96,200 (spread width \u00d7 lot = max risk capital)",
+    "status": "Open",
+    "exit_price": null,
+    "pnl_per_lot": null,
+    "total_pnl": null,
+    "suggestion": "HOLD",
+    "suggestion_reason": "Trade just entered \u2014 monitor for first checkpoint.",
+    "notes": ""
+  }
+]

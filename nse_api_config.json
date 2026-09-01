@@ -1,0 +1,7 @@
+{
+    "_comment": "Angel One SmartAPI credentials for real-time option chain. See download_oc_realtime.ps1 for setup steps.",
+    "api_key":      "",
+    "client_id":    "",
+    "password":     "",
+    "totp_secret":  ""
+}

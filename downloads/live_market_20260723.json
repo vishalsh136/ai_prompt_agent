@@ -1,0 +1,40 @@
+﻿{
+    "timestamp":  "2026-07-23 21:59:26",
+    "source":  "NSE allIndices (live)",
+    "indices":  [
+                    {
+                        "index":  "NIFTY 50",
+                        "last":  23869.6,
+                        "open":  23904.8,
+                        "high":  23990.75,
+                        "low":  23807.2,
+                        "previousClose":  23996.25,
+                        "change":  -126.65,
+                        "changePct":  -0.53,
+                        "pe":  "20.35",
+                        "pb":  "2.98",
+                        "dy":  "1.21",
+                        "advances":  "20",
+                        "declines":  "30",
+                        "yearHigh":  26373.2,
+                        "yearLow":  22182.55
+                    },
+                    {
+                        "index":  "NIFTY BANK",
+                        "last":  56592,
+                        "open":  56796.95,
+                        "high":  56930.15,
+                        "low":  56374.75,
+                        "previousClose":  57126.8,
+                        "change":  -534.8,
+                        "changePct":  -0.94,
+                        "pe":  "13.63",
+                        "pb":  "1.76",
+                        "dy":  "0.81",
+                        "advances":  "2",
+                        "declines":  "12",
+                        "yearHigh":  61764.85,
+                        "yearLow":  49954.85
+                    }
+                ]
+}

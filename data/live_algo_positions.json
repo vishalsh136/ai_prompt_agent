@@ -1,0 +1,67 @@
+{
+  "algo_NIFTY_Agent-OptionSeller_20260831": {
+    "broker": "Groww",
+    "symbol": "NIFTY",
+    "strategy": "Agent-OptionSeller",
+    "lots": 1,
+    "units_per_leg": 65,
+    "expiry": "2026-09-01",
+    "legs": [
+      {
+        "action": "SELL",
+        "option_type": "CE",
+        "strike": 24200
+      },
+      {
+        "action": "SELL",
+        "option_type": "PE",
+        "strike": 23900
+      },
+      {
+        "action": "BUY",
+        "option_type": "CE",
+        "strike": 24350
+      },
+      {
+        "action": "BUY",
+        "option_type": "PE",
+        "strike": 23750
+      }
+    ],
+    "entry_value": 31.6,
+    "entry_time": "2026-08-31T10:15:29.149025",
+    "status": "open",
+    "dry_run": true,
+    "intent_id": "algo_NIFTY_Agent-OptionSeller_20260831",
+    "leg_refs": [
+      {
+        "groww_order_id": null,
+        "order_reference_id": "algo-000c36904b-0",
+        "ref_id": "sim_a4c3a808f7",
+        "ok": true
+      },
+      {
+        "groww_order_id": null,
+        "order_reference_id": "algo-000c36904b-1",
+        "ref_id": "sim_1eec518c64",
+        "ok": true
+      },
+      {
+        "groww_order_id": null,
+        "order_reference_id": "algo-000c36904b-2",
+        "ref_id": "sim_45dad7a602",
+        "ok": true
+      },
+      {
+        "groww_order_id": null,
+        "order_reference_id": "algo-000c36904b-3",
+        "ref_id": "sim_274cece30c",
+        "ok": true
+      }
+    ],
+    "est_amount": 2054.0,
+    "selection_mode": "auto_winner",
+    "updated_utc": "2026-08-31T04:45:35.479378+00:00",
+    "created_utc": "2026-08-31T04:45:35.479378+00:00"
+  }
+}

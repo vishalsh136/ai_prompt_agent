@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "📚 Update Docs (doc_agent)",
+      "type": "shell",
+      "command": "python doc_agent.py",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "detail": "Update APP_FUNCTIONALITY_REFERENCE.md for any changed source files"
+    },
+    {
+      "label": "📚 Rebuild All Docs (force)",
+      "type": "shell",
+      "command": "python doc_agent.py --force",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "detail": "Force-rebuild all sections of APP_FUNCTIONALITY_REFERENCE.md"
+    },
+    {
+      "label": "📚 Check Doc Status",
+      "type": "shell",
+      "command": "python doc_agent.py --status",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "detail": "Show which files changed without updating docs"
+    }
+  ]
+}

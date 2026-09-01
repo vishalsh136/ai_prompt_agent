@@ -1,0 +1,105 @@
+# ============================================================
+# Indian Market Study Tool — Configuration
+# ============================================================
+# Edit these values to customise the app's defaults.
+# DO NOT use this tool for live trading or broker connectivity.
+
+symbols:
+  indices:
+    - NIFTY
+    - BANKNIFTY
+    - FINNIFTY
+  # Common NSE F&O stocks (add any NSE F&O stock here)
+  stocks:
+    - RELIANCE
+    - TCS
+    - INFY
+    - HDFCBANK
+    - ICICIBANK
+    - SBIN
+    - WIPRO
+    - BAJFINANCE
+    - TATASTEEL
+    - ADANIENT
+  default: NIFTY
+
+data:
+  # File paths use {symbol} as a placeholder.
+  # The DataProvider will generate sample CSVs on first run.
+  paths:
+    futures:      "data/futures_{symbol}.csv"
+    option_chain: "data/option_chain_{symbol}.csv"
+    pcr:          "data/pcr_{symbol}.csv"
+  # Lot sizes as per NSE F&O specifications (approximate — verify with NSE before use)
+  lot_sizes:
+    # Indices
+    NIFTY:      65
+    BANKNIFTY:  15
+    FINNIFTY:   40
+    # Stocks (approximate as of mid-2026 — NSE revises these periodically)
+    RELIANCE:   250
+    TCS:        150
+    INFY:       300
+    HDFCBANK:   550
+    ICICIBANK:  700
+    SBIN:      1500
+    WIPRO:     1500
+    BAJFINANCE: 125
+    TATASTEEL: 5500
+    ADANIENT:   625
+  # Strike price intervals
+  tick_sizes:
+    # Indices
+    NIFTY:     50
+    BANKNIFTY: 100
+    FINNIFTY:   50
+    # Stocks
+    RELIANCE:   50
+    TCS:        50
+    INFY:       50
+    HDFCBANK:   50
+    ICICIBANK:  50
+    SBIN:       10
+    WIPRO:      10
+    BAJFINANCE: 50
+    TATASTEEL:  10
+    ADANIENT:   50
+  # Approximate margin percentages (educational estimate only — use SPAN calculator for real values)
+  margin_pct:
+    futures:      0.21   # ~21% (SPAN + exposure) for index futures
+    options_sell: 0.20   # ~20% of notional for short option legs
+
+market:
+  risk_free_rate: 0.07      # 7% per annum (approx. 91-day T-bill rate)
+  trading_days_per_year: 252
+
+strategy_defaults:
+  moving_average:
+    short_window: 20
+    long_window:  50
+  pcr:
+    bullish_threshold: 0.75   # PCR below this → market may be over-bullish
+    bearish_threshold: 1.25   # PCR above this → market may be over-bearish
+  volatility:
+    high_iv_percentile: 75    # IV above this percentile = expensive options
+    low_iv_percentile:  25    # IV below this percentile = cheap options
+
+backtesting:
+  initial_capital: 1000000   # ₹10 Lakh starting capital
+  transaction_cost_pct: 0.0005   # 0.05% per trade (brokerage + STT approx.)
+  slippage_pct: 0.001            # 0.1% slippage assumption
+  default_start: "2024-01-01"
+  default_end:   "2024-12-31"
+
+risk_controls:
+  gap_shock_pct: 1.2                    # gap threshold (%) for shock warning logic
+  base_stop_slippage_pct: 0.20          # base adverse stop fill slippage (%)
+  extra_slippage_per_gap_pct: 0.25      # extra slippage multiplier during gap shock
+  max_stop_slippage_pct: 3.00           # slippage hard cap (%)
+  trailing_lock_pct: 0.35               # lock this fraction of favorable move
+  trailing_activation_pct_to_target: 40 # start trailing after this % of target progress
+  daily_max_loss_inr: -15000            # kill-switch threshold for aggregate day P&L
+
+logging:
+  log_file: "logs/app.log"
+  level: "INFO"

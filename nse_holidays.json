@@ -1,0 +1,25 @@
+{
+  "_comment": "NSE market holidays. Add/remove dates as needed (YYYY-MM-DD). When a Thursday expiry falls on a holiday, expiry moves to Wednesday. Source: NSE India official holiday calendar.",
+  "holidays": [
+    "2026-01-26",
+    "2026-03-17",
+    "2026-04-14",
+    "2026-04-30",
+    "2026-05-01",
+    "2026-08-15",
+    "2026-10-02",
+    "2026-10-24",
+    "2026-11-14",
+    "2026-11-25",
+    "2026-12-25",
+    "2027-01-26",
+    "2027-03-06",
+    "2027-03-30",
+    "2027-04-14",
+    "2027-08-15",
+    "2027-10-02",
+    "2027-10-13",
+    "2027-11-03",
+    "2027-12-25"
+  ]
+}

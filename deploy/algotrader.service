@@ -1,0 +1,18 @@
+[Unit]
+Description=AI Prompt Agent - Auto Algo Trader loop
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/ai_prompt_agent
+Environment=PYTHONUNBUFFERED=1
+# The loop has built-in trade-window + hard-squareoff guards, so running 24/7
+# is safe: it only acts during market hours and squares off at the configured time.
+ExecStart=/home/ubuntu/ai_prompt_agent/.venv/bin/python -m src.algo_auto_trader --loop
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

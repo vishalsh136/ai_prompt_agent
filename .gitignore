@@ -1,0 +1,7 @@
+# Secrets / local runtime config (never commit real credentials)
+algo_trade_config.json
+data/live_auto_config.json
+
+# Python
+__pycache__/
+*.pyc
