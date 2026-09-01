@@ -1,0 +1,17 @@
+name: Auto Algo Trader Loop
+
+on:
+  schedule:
+    - cron: '30 9 * * 1-5'  # 9:30 AM IST on weekdays
+  workflow_dispatch:
+
+jobs:
+  run-algo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python -m src.algo_auto_trader --loop --max-cycles=1
