@@ -759,7 +759,7 @@ with st.sidebar:
 
     # ---- Last data refresh status (sidebar top - make visible) ----
     st.divider()
-    
+   
     # Add refresh button to manually update data
     col1, col2 = st.columns([3, 1])
     with col1:
@@ -767,7 +767,7 @@ with st.sidebar:
     with col2:
         if st.button("🔄", help="Refresh data from downloads", key="sidebar_refresh"):
             st.rerun()
-    
+   
     try:
         import glob as _g, json as _js2
         _oc_list = sorted(
@@ -787,17 +787,17 @@ with st.sidebar:
             except Exception:
                 _cron_fmt = _cron_t[:16] or "—"
                 _mkt_fmt  = _mkt_t[:16]  or "—"
-            
+           
             # Display in a nicer format with better visibility
             st.markdown(f"""
             **Cron run:** `{_cron_fmt}`  
             **Market ts:** `{_mkt_fmt}`
             """)
-            
+           
             if _spot_v:
                 # Use a formatted info box for market data
                 st.info(f"🔹 NIFTY ₹{_spot_v:,.1f} | VIX {_vix_v:.2f} | PCR {_pcr_v:.4f}")
-            
+           
             # Show last update time in smaller text
             st.caption(f"Last refreshed: {_mkt_fmt}")
         else:
@@ -834,7 +834,7 @@ with tab1:
     st.header(f"Institutional Trader View — {symbol}")
     st.caption(
         "Mimics the style of analysis a futures desk might run. "
-        + ("**Using your real NSE files.** Price action and option chain are live data." 
+        + ("**Using your real NSE files.** Price action and option chain are live data."
            if st.session_state.get("real_data_loaded") else
            "All data is SYNTHETIC and for study only.")
     )
@@ -2851,28 +2851,28 @@ with tab9:
         import json as _js_p
         from datetime import datetime as _dt_p, timezone as _tz_p
         from pathlib import Path as _Path_p
-        
+       
         _url = "https://www.niftytrader.in/nse-option-chain/nifty"
         _headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
             "Referer": "https://www.google.com"
         }
-        
+       
         try:
             _r = _req.get(_url, headers=_headers, timeout=12)
             _r.raise_for_status()
-            
+           
             _nd = _re_p.search(r'<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)</script>', _r.text)
             if not _nd:
                 return False
-                
+               
             _nd_json = _js_p.loads(_nd.group(1))
             _pp = _nd_json.get("props", {}).get("pageProps", {})
             _spot = _pp.get("initialSpot", {})
             if not _spot:
                 return False
-                
+               
             _out = {
                 "symbol": "NIFTY",
                 "timestamp": _spot.get("timestamp", ""),
@@ -2893,7 +2893,7 @@ with tab9:
                 "pcr_change": float(_pp.get("chngPcrValue", 0) or 0) if _pp.get("chngPcrValue") else None,
                 "strikes": []
             }
-            
+           
             _raw_rows = _pp.get("initialOptionChainData", [])
             for _row in sorted(_raw_rows, key=lambda x: float(x.get("strike_price", 0) or 0)):
                 _out["strikes"].append({
@@ -2917,18 +2917,18 @@ with tab9:
                         "buildup": _row.get("puts_builtup", "")
                     }
                 })
-                
+               
             _date_stamp = _dt_p.now().strftime("%Y%m%d")
             _Path_p("downloads").mkdir(exist_ok=True)
             _Path_p(f"downloads/option_chain_NIFTY_{_date_stamp}.json").write_text(_js_p.dumps(_out, indent=2), encoding="utf-8")
             _Path_p(f"downloads/pcr_NIFTY_{_date_stamp}.json").write_text(_js_p.dumps({"pcr_overall": _out["pcr"], "timestamp": _out["timestamp"]}, indent=2), encoding="utf-8")
-            
+           
             # Run CSV conversion dynamically
             import convert_cron_to_app
             import importlib
             importlib.reload(convert_cron_to_app)
             convert_cron_to_app.main()
-            
+           
             # Run trade engine updater dynamically
             from src.auto_trade_engine import update_open_trades
             update_open_trades(mode="update")
@@ -3074,7 +3074,7 @@ with tab9:
     _col_stream1, _col_stream2 = st.columns([3, 1])
     with _col_stream1:
         _stream_val = st.toggle("🔌 Active Live Streaming (Fetch new quotes & updates P&L every 10s)", value=False, key="at_live_streaming_toggle")
-    
+   
     if _stream_val:
         # Trigger pure Python live update silently without manual button force reloads!
         with st.spinner("Streaming live quotes..."):
@@ -3143,11 +3143,15 @@ with tab9:
             st.rerun()
         if _mc3.button("📥 Full Cron Download", key="at_full_cron_btn"):
             import subprocess as _sp
+            import platform as _pl
             with st.spinner("Running full cron (may take ~60s)..."):
-                _r = _sp.run(
-                    ["powershell", "-ExecutionPolicy", "Bypass", "-File",
-                     str(_Path(".").resolve() / "download_nse_data.ps1"), "-Mode", "auto"],
-                    capture_output=True, text=True, cwd=str(_Path(".").resolve()))
+                if _pl.system() == "Windows":
+                    _r = _sp.run(
+                        ["powershell", "-ExecutionPolicy", "Bypass", "-File",
+                         str(_Path(".").resolve() / "download_nse_data.ps1"), "-Mode", "auto"],
+                        capture_output=True, text=True, cwd=str(_Path(".").resolve()))
+                else:
+                    _r = _sp.run(["python", "download_nse_data.py"], capture_output=True, text=True, cwd=str(_Path(".").resolve()))
             st.code(_r.stdout[:2000])
             st.rerun()
         if _mc4.button("🧮 Migrate Open NIFTY 25→65", key="at_migrate_nifty_lot_btn"):
@@ -3167,26 +3171,26 @@ with tab9:
     # ── Helper: Analyze trade from microstructure perspective ──
     def _analyze_trade_winner(trade, symbol):
         """Determine likely winner (crowd vs smart money) based on microstructure.
-        
+       
         Uses market microstructure analysis if option chain data is current,
         otherwise falls back to simple rules based on direction and instrument type.
         """
         try:
             import re
-            
+           
             # Get trade info
             _trade_symbol = trade.get("symbol", symbol)
             _trade_strike_str = str(trade.get("strike", "")).strip()
             _direction = str(trade.get("direction", "")).lower().strip()
             _instrument = str(trade.get("instrument", "")).lower().strip()
-            
+           
             if not _trade_strike_str or _trade_strike_str == "" or _trade_strike_str == "—":
                 return "—"
-            
+           
             # Parse strikes
             _strikes_nums = re.findall(r'\d+', _trade_strike_str)
             _trade_strikes_set = set()
-            
+           
             for _s in _strikes_nums:
                 try:
                     _strike_int = int(_s)
@@ -3194,10 +3198,10 @@ with tab9:
                         _trade_strikes_set.add(_strike_int)
                 except:
                     pass
-            
+           
             if not _trade_strikes_set:
                 return "—"
-            
+           
             # ── FALLBACK LOGIC — sentiment-aware buyer classification ──
             # Import the fixed winner_label that uses sentiment context
             try:
@@ -3218,14 +3222,14 @@ with tab9:
                 return "🧠 Smart (Win)"
             else:
                 return "—"
-                
+               
         except Exception as _e_mm:
             return "—"
 
     # ── Helper: Analyze hold/exit decision based on market direction ──
     def _analyze_hold_exit(trade, symbol):
         """Determine if trade should HOLD or EXIT based on market movement vs thesis.
-        
+       
         Returns: (emoji_icon, decision, justification_text)
         """
         try:
@@ -3234,18 +3238,18 @@ with tab9:
             _pnl = float(trade.get("current_pnl", 0) or 0)
             _dir = str(trade.get("direction", "buy")).lower().strip()
             _status = str(trade.get("status", "Open")).lower()
-            
+           
             # Skip closed/skipped trades
             if _status != "open":
                 return "—", "—", "—"
-            
+           
             if _ep <= 0 or _cur <= 0:
                 return "⚪", "Hold", "Insufficient data"
-            
+           
             # Determine market movement direction
             _moved_up = _cur > _ep
             _is_profitable = _pnl >= 0
-            
+           
             # For BUY trades (expecting upside)
             if "buy" in _dir or "long" in _dir:
                 if _moved_up and _is_profitable:
@@ -3256,8 +3260,8 @@ with tab9:
                     return "🟢", "HOLD", "Market down yet Profitable ✓ Unusual but good, hold SL"
                 else:  # not moved up and not profitable
                     return "🔴", "EXIT", "Market down + Loss ✗ Thesis broken, exit now"
-            
-            # For SELL trades (expecting downside) 
+           
+            # For SELL trades (expecting downside)
             elif "sell" in _dir or "short" in _dir:
                 if not _moved_up and _is_profitable:
                     return "🟢", "HOLD", "Market down + Profit ✓ Thesis working, stay"
@@ -3267,9 +3271,9 @@ with tab9:
                     return "🟢", "HOLD", "Market up yet Profitable ✓ Unusual but good, hold SL"
                 else:  # moved up and not profitable
                     return "🔴", "EXIT", "Market up + Loss ✗ Thesis broken, exit now"
-            
+           
             return "⚪", "Hold", "Direction unclear"
-            
+           
         except Exception as _e_hx:
             return "⚪", "—", "—"
 
@@ -3457,10 +3461,10 @@ with tab9:
                     _strike_disp = f"PE:B{_b_pe}/S{_s_pe} | CE:S{_s_ce}/B{_b_ce}"
                 elif _s_ce and _s_pe:
                     _strike_disp = f"PE:S{_s_pe} | CE:S{_s_ce} (wings missing)"
-            
+           
             # Analyze who wins from microstructure perspective
             _likely_winner = _analyze_trade_winner(_t, symbol)
-            
+           
             # Analyze hold/exit decision based on market movement
             _decision_icon, _decision_text, _decision_reason = _analyze_hold_exit(_t, symbol)
 
@@ -4128,7 +4132,7 @@ with tab11:
     st.header(f"🎰 Market Microstructure — {symbol}")
     st.caption("Identify crowd vs smart money. Know WHO WINS in crowded trades.")
     st.divider()
-    
+   
     # Load option chain data
     try:
         oc_file = f"data/option_chain_{symbol}.csv"
@@ -4137,13 +4141,13 @@ with tab11:
             st.info("Run the NSE data cron job first to get live option chain data.")
         else:
             oc_df = pd.read_csv(oc_file)
-            
+           
             # ---- Section 1: Options Flow Analysis ----
             st.subheader("📊 1. Options Flow Analysis")
             st.caption("Call vs Put buying pressure. High call ratio = crowd is bullish = watch out!")
-            
+           
             flow = analyze_options_flow(oc_df)
-            
+           
             _flow_col1, _flow_col2, _flow_col3, _flow_col4 = st.columns(4)
             with _flow_col1:
                 st.metric("Call Volume Ratio", f"{flow.get('call_volume_ratio', 0):.1f}%",
@@ -4157,12 +4161,12 @@ with tab11:
             with _flow_col4:
                 st.metric("Put IV (Avg)", f"{flow.get('put_avg_iv', 50):.1f}",
                           help="Average IV of put options.")
-            
+           
             st.markdown(f"""
 ### Sentiment: {flow.get('sentiment', '⚪ NEUTRAL')}
 **Crowd Conviction**: {flow.get('crowd_conviction', 'MODERATE')}
 
-{['⚠️ **CRITICAL**: Crowd is EXTREMELY BULLISH at {flow.get("call_volume_ratio", 50)}% call ratio. Premium is likely OVERHEATED. Smart money may be fading this move.', 
+{['⚠️ **CRITICAL**: Crowd is EXTREMELY BULLISH at {flow.get("call_volume_ratio", 50)}% call ratio. Premium is likely OVERHEATED. Smart money may be fading this move.',
   '⚠️ Crowd is strongly bullish. Most retail traders have bought CE. This is a contrarian warning signal.',
   '✓ Market sentiment is balanced. Lower crowd concentration = potential edge for disciplined traders.',
   '✓ Crowd is scattered. Fewer herding risk.'][
@@ -4171,21 +4175,21 @@ with tab11:
     2 if flow.get('call_volume_ratio', 50) > 55 else
     3]}
             """)
-            
+           
             st.divider()
-            
+           
             # ---- Section 2: OI Heatmap ----
             st.subheader("🔥 2. Open Interest Heatmap")
             st.caption("Which strikes are being accumulated? Which are abandoned? Accumulation = smart money buying.")
-            
+           
             heatmap = get_oi_heatmap(oc_df)
             if not heatmap.empty:
                 # Separate CE and PE
                 ce_hm = heatmap[heatmap['opt_type'] == 'CE'].sort_values('buying_pressure', ascending=False).head(10)
                 pe_hm = heatmap[heatmap['opt_type'] == 'PE'].sort_values('buying_pressure', ascending=False).head(10)
-                
+               
                 _hm_col1, _hm_col2 = st.columns(2)
-                
+               
                 with _hm_col1:
                     st.markdown("#### CE Top Accumulation Zones")
                     if not ce_hm.empty:
@@ -4195,7 +4199,7 @@ with tab11:
                                 'iv': 'IV', 'buying_pressure': 'Pressure Score'
                             }),
                             hide_index=True)
-                
+               
                 with _hm_col2:
                     st.markdown("#### PE Top Accumulation Zones")
                     if not pe_hm.empty:
@@ -4205,13 +4209,13 @@ with tab11:
                                 'iv': 'IV', 'buying_pressure': 'Pressure Score'
                             }),
                             hide_index=True)
-            
+           
             st.divider()
-            
+           
             # ---- Section 3: Crowd Bias Detector ----
             st.subheader("👥 3. Crowd Bias Detector")
             st.caption("Strikes where CROWD is gathered = EXPENSIVE = LOSSES. Where is the dumb money?")
-            
+           
             crowd_strikes = detect_crowd_bias(oc_df)
             if crowd_strikes:
                 _cb_data = []
@@ -4225,10 +4229,10 @@ with tab11:
                         'IV': cs['iv'],
                         'Risk': cs['risk_level']
                     })
-                
+               
                 _cb_df = pd.DataFrame(_cb_data)
                 st.dataframe(_cb_df, hide_index=True)
-                
+               
                 if crowd_strikes and crowd_strikes[0]['crowd_pct'] > 10:
                     st.warning(f"""
 🚨 **HIGH CROWD CONCENTRATION DETECTED**
@@ -4244,15 +4248,15 @@ with tab11:
 
 **Action**: Look for isolated sellers (low crowd %) with similar technical setup.
                     """)
-            
+           
             st.divider()
-            
+           
             # ---- Section 4: IV Rank ----
             st.subheader("📈 4. IV Rank (Expensive or Cheap?)")
             st.caption("If IV Rank = 75%, options are EXPENSIVE (premium paid high). If = 25%, they're CHEAP (good entry).")
-            
+           
             iv_rank = calculate_iv_rank(oc_df, symbol=symbol)
-            
+           
             _iv_col1, _iv_col2, _iv_col3 = st.columns(3)
             with _iv_col1:
                 st.metric("IV Rank Percentile", f"{iv_rank:.0f}%")
@@ -4263,22 +4267,22 @@ with tab11:
                 st.metric("Recommendation",
                           "SELL (earn premium)" if iv_rank > 70 else "NEUTRAL" if iv_rank > 40 else "BUY (good value)",
                           help="General guidance only")
-            
+           
             st.markdown(f"""
 ### Interpretation
-- **IV Rank > 70**: Options are EXPENSIVE (cost high). Good for SELLERS, bad for BUYERS. Crowd likely overpaying. 
+- **IV Rank > 70**: Options are EXPENSIVE (cost high). Good for SELLERS, bad for BUYERS. Crowd likely overpaying.
 - **IV Rank 40-70**: Fair value. Normal trading range.
 - **IV Rank < 40**: Options are CHEAP (cost low). Good for BUYERS, bad for SELLERS. Smart entry zone for aggressive trades.
 
 **For this {symbol}**: IV Rank = {iv_rank:.0f}% → {"AVOID buying high premium, consider selling" if iv_rank > 70 else "Neutral zone" if iv_rank > 40 else "Good buying opportunity for disciplined traders"}
             """)
-            
+           
             st.divider()
-            
+           
             # ---- Section 5: Smart Entry Zones ----
             st.subheader("💡 5. Smart Entry Zones")
             st.caption("Where SMART MONEY enters: Low IV, Low Crowd, High Volume (isolation).")
-            
+           
             smart_zones = find_smart_entry_zones(oc_df, iv_rank)
             if not smart_zones.empty:
                 st.dataframe(
@@ -4290,13 +4294,13 @@ with tab11:
                 st.caption("⭐ Quality = ⭐⭐⭐ is BEST value entry (lowest IV + lowest crowd).")
             else:
                 st.info("No low-IV entry zones found. IV is generally low across all strikes.")
-            
+           
             st.divider()
-            
+           
             # ---- Section 6: Realistic P&L Simulator ----
             st.subheader("💰 6. Realistic P&L Simulator")
             st.caption("What does a +50% trade ACTUALLY net after slippage, brokerage, and taxes?")
-            
+           
             _pnl_col1, _pnl_col2, _pnl_col3, _pnl_col4 = st.columns(4)
             with _pnl_col1:
                 _pnl_entry = st.number_input("Entry Price (₹)", min_value=10, max_value=5000, value=100, key="pnl_entry")
@@ -4306,12 +4310,12 @@ with tab11:
                 _pnl_qty = st.number_input("Quantity (lots)", min_value=1, max_value=50, value=1, key="pnl_qty")
             with _pnl_col4:
                 _pnl_brok = st.slider("Brokerage %", 0.01, 0.10, 0.03, key="pnl_brok")
-            
+           
             _pnl_result = calculate_realistic_pnl(
                 _pnl_entry, _pnl_exit, _pnl_qty,
                 brokerage_pct=_pnl_brok, slippage_pct=0.5, tax_rate=20
             )
-            
+           
             if _pnl_result:
                 _pnl_c1, _pnl_c2, _pnl_c3, _pnl_c4 = st.columns(4)
                 with _pnl_c1:
@@ -4325,7 +4329,7 @@ with tab11:
                 with _pnl_c4:
                     st.metric("Net P&L", f"₹{_pnl_result['net_pnl']:,.0f}",
                               f"{_pnl_result.get('net_pnl_pct', 0):+.1f}%")
-                
+               
                 st.markdown(f"""
 ### {_pnl_result['result_quality']}
 
@@ -4342,7 +4346,7 @@ with tab11:
 
 **Hidden Cost Impact**: {_pnl_result.get('cost_as_pct_of_gross', 0):.0f}% of your gross profit disappears to costs!
                 """)
-                
+               
                 if _pnl_result['net_pnl'] < _pnl_result['gross_pnl'] * 0.5:
                     st.warning("""
 ⚠️ **Most of your profits are eaten by costs!**
@@ -4353,13 +4357,13 @@ To survive:
 3. **Minimize holding time**: Theta decay + tax eating gains
 4. **Size bigger moves**: Need >75% gross profit to get >25% net
                     """)
-            
+           
             st.divider()
-            
+           
             # ---- Section 7: Crowd vs Smart Analysis ----
             st.subheader("🎯 Crowd vs Smart Money Prediction")
             st.caption("Where is dumb money? Where are smart traders positioned?")
-            
+           
             if crowd_strikes:
                 analysis = crowd_vs_smart_analysis(oc_df, crowd_strikes)
                 st.markdown(f"""
@@ -4375,12 +4379,12 @@ To survive:
 ### Probability Prediction
 {analysis.get('probability_prediction', 'Neutral')}
 
-**Action**: 
+**Action**:
 - If you BOUGHT crowd strike → Consider exiting early (theta decay accelerates)
 - If you AVOIDED crowd strike → Good discipline! Enter smart zones.
 - If you SOLD crowd strike → Well positioned! Collect premium.
                 """)
-            
+           
             with st.expander("📚 How to Read This Tab"):
                 st.markdown("""
 ### Understanding Market Microstructure
@@ -4403,7 +4407,7 @@ To survive:
 
 **5. Smart Entry Zones**: Low IV + Low crowd + high technical confluence = where experienced traders play.
 
-**6. Realistic P&L**: 
+**6. Realistic P&L**:
 - A "+50%" trade might only net +15% after slippage (−0.5%), brokerage (−0.03%), taxes (−20%)
 - Crowd often fails because they don't account for these hidden costs
 
@@ -4417,7 +4421,7 @@ To survive:
 5. Use Realistic P&L → Set expectations. Know your costs before trading
 6. Repeat: Contrarian trades (opposite of crowd) have higher win probability
                 """)
-            
+           
     except Exception as e:
         st.error(f"Error loading market microstructure analysis: {e}")
         st.info("Check that option chain data is available and properly formatted.")
@@ -4439,7 +4443,7 @@ with tab12:
         # 1. Load context data
         trades_list = tt.load_trades()
         performance_data = agent.analyze_journal_metrics(trades_list)
-        
+       
         # We need spots, futures, and vix context. Get them from loaded state
         vix_val = 0.0
         try:
@@ -4451,7 +4455,7 @@ with tab12:
                 vix_val = float(_oc_json_data.get("vix", 0) or 0)
         except Exception:
             pass
-            
+           
         regime_data = agent.evaluate_market_regime(futures_df, chain_df, vix_val)
         optimizations = agent.optimize_logic_parameters(performance_data, regime_data)
 
@@ -4478,7 +4482,7 @@ with tab12:
         # ---- Section 3: Performance Audit ----
         st.divider()
         st.subheader("📊 Trade Performance Feedback Loop")
-        
+       
         _pcol1, _pcol2, _pcol3, _pcol4 = st.columns(4)
         with _pcol1:
             st.metric("Total Logged Trades", performance_data["total_trades"])
@@ -4509,7 +4513,7 @@ with tab12:
         # ---- Section 4: Market Context Audit ----
         st.divider()
         st.subheader("🌐 Current Market Health Summary")
-        
+       
         _mcol1, _mcol2, _mcol3 = st.columns(3)
         with _mcol1:
             st.metric("Trend State", regime_data.get("trend", "N/A"))
@@ -5526,7 +5530,7 @@ with tab14:
 
     # ── Section F · Live Status ──
     st.subheader("F · 📊 Live Status")
-    
+   
     # Auto-refresh: Show refresh button + interval selector
     _refresh_col1, _refresh_col2, _refresh_col3 = st.columns([1, 2, 2])
     with _refresh_col1:
@@ -5539,14 +5543,14 @@ with tab14:
             st.session_state.last_refresh = 0
     with _refresh_col3:
         st.caption(f"ℹ️ LTPs update every {_refresh_secs}s during market hours")
-    
+   
     # Auto-refresh mechanism
     import time as _time_module
     _now_ts = _time_module.time()
     _should_refresh = (_now_ts - st.session_state.last_refresh) >= _refresh_secs
     if _should_refresh:
         st.session_state.last_refresh = _now_ts
-    
+   
     _fa1, _fa2 = st.columns(2)
     with _fa1:
         st.markdown("**Open positions**")
@@ -5594,7 +5598,7 @@ with tab14:
             for _pid, _p in _aopen.items():
                 _entry_premium = float(_p.get('entry_value', 0) or 0)
                 _est_amt = float(_p.get('est_amount', 0) or 0)
-                
+               
                 # Fetch live LTP and calculate unrealized P&L
                 _unrealized_pnl = "—"
                 _current_ltp = "—"
@@ -5606,7 +5610,7 @@ with tab14:
                     _symbol = _p.get("symbol", "NIFTY")
                     _expiry = str(_p.get("expiry", ""))
                     _legs = _p.get("legs", [])
-                    
+                   
                     if _legs and _expiry:
                         _ltps_res = _broker.get_leg_ltps(_symbol, _expiry, _legs)
                         if _ltps_res.get("ok") and _ltps_res.get("ltps"):
@@ -5619,17 +5623,17 @@ with tab14:
                                 _strike = _leg.get("strike", 0)
                                 _key = f"{_strike}{_opt_type}"
                                 _ltp = _ltps.get(_key, 0)
-                                
+                               
                                 # Build display of LTP
                                 if _current_ltp == "—":
                                     _current_ltp = f"₹{_ltp:.2f}"
-                                
+                               
                                 # P&L: if BUY, current_val = -LTP; if SELL, current_val = +LTP
                                 if _action == "BUY":
                                     _current_val -= _ltp
                                 else:  # SELL
                                     _current_val += _ltp
-                            
+                           
                             # Unrealized P&L = current_value - entry_value (in INR)
                             _units_pos = int(_p.get("units_per_leg", 1) or 1)
                             _unrealized_inr = (_entry_premium - _current_val) * _units_pos
@@ -5670,7 +5674,7 @@ with tab14:
                             pass
 
                 _total_unrealized_inr += _unrealized_inr_num
-                
+               
                 _pos_rows.append({
                     "Position ID":   _pid,
                     "Broker":        _p.get("broker", "—"),
@@ -6133,4 +6137,3 @@ with tab14:
             )
         elif _rec:
             st.info(_rec.get("message", "No confident recommendation yet."))
-
